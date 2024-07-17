@@ -6,7 +6,6 @@ def encrypt(text, shift):
     
     for i in range(len(text)):
         char = text[i]
-        
         # Encrypt uppercase characters
         if char.isupper():
             result += chr((ord(char) + shift - 65) % 26 + 65)
@@ -16,7 +15,6 @@ def encrypt(text, shift):
         # Leave other characters unchanged
         else:
             result += char
-            
     return result
 
 def decrypt(text, shift):
@@ -24,7 +22,6 @@ def decrypt(text, shift):
     
     for i in range(len(text)):
         char = text[i]
-        
         # Decrypt uppercase characters
         if char.isupper():
             result += chr((ord(char) - shift - 65) % 26 + 65)
@@ -34,7 +31,6 @@ def decrypt(text, shift):
         # Leave other characters unchanged
         else:
             result += char
-            
     return result
 
 def main():
